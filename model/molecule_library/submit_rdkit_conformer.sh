@@ -16,8 +16,8 @@ source /h/pangkuan/miniconda3/envs/unimol/bin/activate
 # SLURM_ARRAY_TASK_ID=0
 echo "processing ${SLURM_ARRAY_TASK_ID}"
 
-INPUT_DIR="/scratch/ssd004/datasets/cellxgene/3d_molecule_data/220k-lib/partitioned_csv"
-OUTPUT_DIR="/scratch/ssd004/datasets/cellxgene/3d_molecule_data/220k-lib/lmdb"
+INPUT_DIR="/scratch/ssd004/datasets/cellxgene/3d_molecule_data/220k-lib/partitioned_csv"  # it creates a file with the following path. wherever you type INPUT_DIR , it will get replaced with the following path
+OUTPUT_DIR="/scratch/ssd004/datasets/cellxgene/3d_molecule_data/220k-lib/lmdb" # same as Input
 
 input_file=${INPUT_DIR}/${SLURM_ARRAY_TASK_ID}.csv
 output_file=${OUTPUT_DIR}/${SLURM_ARRAY_TASK_ID}
